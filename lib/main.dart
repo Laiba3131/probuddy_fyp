@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pro_buddy/routes/app_routes.dart';
 import 'package:pro_buddy/view/onboard_screens/splash_screen.dart';
 import 'package:sizer/sizer.dart';
 
@@ -13,13 +15,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context, Orientation, DeviceType) {
-      return MaterialApp(
+      return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'PROBUDDY',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const SplashScreen(),
+        initialRoute: SplashScreen.route,
+        getPages: AppPages.pages,
       );
     });
   }

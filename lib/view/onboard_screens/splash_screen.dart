@@ -7,6 +7,7 @@ import '../../utils/text_style.dart';
 import '../../utils/utils.dart';
 
 class SplashScreen extends StatefulWidget {
+  static String route = "/splaseScreen";
   const SplashScreen({super.key});
 
   @override
@@ -31,7 +32,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
           // backgroundColor: AppColors.black,

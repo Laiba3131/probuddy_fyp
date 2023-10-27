@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pro_buddy/utils/app_colors.dart';
 import 'package:pro_buddy/utils/text_style.dart';
 import 'package:sizer/sizer.dart';
@@ -35,29 +36,30 @@ class GlobalWidgets {
     );
   }
 
-  // static AppBar appBar(String text, {Function()? onTap, bool? showbackButton = true}) {
-  //   return AppBar(
-  //     backgroundColor: AppColors.white,
-  //     elevation: 2,
-  //     title: Text(
-  //       text,
-  //       style: AppTextStyles.poppinsSemiBold(fontSize: 13.sp),
-  //     ),
-  //     leading: (showbackButton ?? false)
-  //         ? IconButton(
-  //             padding: EdgeInsets.zero,
-  //             // iconSize: 15.sp,
-  //             onPressed: onTap ??
-  //                 () {
-  //                   Get.back();
-  //                 },
-  //             icon: const Icon(
-  //               Icons.arrow_back,
-  //               color: AppColors.black,
-  //             ))
-  //         : null,
-  //   );
-  // }
+  static AppBar appBar(String text,
+      {Function()? onTap, bool? showbackButton = true}) {
+    return AppBar(
+      backgroundColor: AppColors.white,
+      elevation: 2,
+      title: Text(
+        text,
+        style: AppTextStyles.poppinsSemiBold(fontSize: 13.sp),
+      ),
+      leading: (showbackButton ?? false)
+          ? IconButton(
+              padding: EdgeInsets.zero,
+              // iconSize: 15.sp,
+              onPressed: onTap ??
+                  () {
+                    Get.back();
+                  },
+              icon: const Icon(
+                Icons.arrow_back,
+                color: AppColors.black,
+              ))
+          : null,
+    );
+  }
 
   // static AppBar homeAppBar(String title) {
   //   return AppBar(

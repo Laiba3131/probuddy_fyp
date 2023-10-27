@@ -1,13 +1,13 @@
-import 'dart:math';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pro_buddy/bottom_sheets/forget_password_sheet.dart';
 import 'package:pro_buddy/common/custom_button.dart';
 import 'package:pro_buddy/common/global_widgets.dart';
 import 'package:pro_buddy/resources/app_images.dart';
 import 'package:pro_buddy/resources/validator.dart';
+import 'package:pro_buddy/view/signup_screen.dart';
 import 'package:sizer/sizer.dart';
-
 import '../common/custom_textformfield.dart';
 import '../resources/app_decoration.dart';
 import '../utils/app_colors.dart';
@@ -15,6 +15,7 @@ import '../utils/hight_width.dart';
 import '../utils/text_style.dart';
 
 class LoginScreen extends StatefulWidget {
+  static String route = "/loginScreen";
   const LoginScreen({super.key});
 
   @override
@@ -96,18 +97,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: InkWell(
                     onTap: () {
                       {
-                        // Get.bottomSheet(ChangePasswordSheet());
-                        // Get.bottomSheet(
-                        //   const ForgotPasswordSheet(
-                        //     title: 'Forgot Password?',
-                        //     subTitle:
-                        //         'Enter your reqistered Email ID We will send you a link to reset your password',
-                        //     labelText: 'Email',
-                        //     placeHolder: 'Enter email',
-                        //     text: 'Proceed',
-                        //   ),
-                        //   isScrollControlled: true,
-                        // );
+                        //   Get.bottomSheet(ChangePasswordSheet());
+                        Get.bottomSheet(
+                          ForgotPasswordSheet(
+                            title: 'Forgot Password?',
+                            subTitle:
+                                'Enter your reqistered Email ID We will send you a link to reset your password',
+                            labelText: 'Email',
+                            placeHolder: 'Enter email',
+                            text: 'Proceed',
+                          ),
+                          isScrollControlled: true,
+                        );
                       }
                     },
                     child: Row(
@@ -131,10 +132,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   tap: () {
                     // context.read<RootProvider>().selectedScreenValue = 2;
                     // context.read<RootProvider>().update();
-                    // if (_formKey.currentState!.validate()) {
-                    //   Get.offAllNamed(UpdateProfileScreen.route,
-                    //       arguments: {"isFromLogin": true});
-                    // }
+                    if (_formKey.currentState!.validate()) {
+                      Get.offAllNamed(SignupScreen.route,
+                          arguments: {"isFromLogin": true});
+                    }
                   },
                 ),
                 h2,
@@ -169,9 +170,10 @@ class _LoginScreenState extends State<LoginScreen> {
         bottomNavigationBar: Padding(
           padding: EdgeInsets.only(bottom: 8.sp),
           child: GlobalWidgets.authBottomWidget(
-              "Don't have an account?", '  Sign up', () {}
-              // => Get.offAllNamed(SignupScreen.route),
-              ),
+            "Don't have an account?",
+            '  Sign up',
+            () => Get.offAllNamed(SignupScreen.route),
+          ),
         ),
       ),
     );
