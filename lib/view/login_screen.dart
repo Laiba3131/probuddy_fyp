@@ -6,6 +6,7 @@ import 'package:pro_buddy/common/custom_button.dart';
 import 'package:pro_buddy/common/global_widgets.dart';
 import 'package:pro_buddy/resources/app_images.dart';
 import 'package:pro_buddy/resources/validator.dart';
+import 'package:pro_buddy/view/home_screens/home_screen.dart';
 import 'package:pro_buddy/view/signup_screen.dart';
 import 'package:sizer/sizer.dart';
 import '../common/custom_textformfield.dart';
@@ -99,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       {
                         //   Get.bottomSheet(ChangePasswordSheet());
                         Get.bottomSheet(
-                          ForgotPasswordSheet(
+                          const ForgotPasswordSheet(
                             title: 'Forgot Password?',
                             subTitle:
                                 'Enter your reqistered Email ID We will send you a link to reset your password',
@@ -133,7 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     // context.read<RootProvider>().selectedScreenValue = 2;
                     // context.read<RootProvider>().update();
                     if (_formKey.currentState!.validate()) {
-                      Get.offAllNamed(SignupScreen.route,
+                      Get.offAllNamed(HomeScreen.route,
                           arguments: {"isFromLogin": true});
                     }
                   },

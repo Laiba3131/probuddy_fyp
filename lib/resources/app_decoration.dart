@@ -64,6 +64,18 @@ class AppDecoration {
           blurRadius: 6,
         ),
       ],
+      // gradient: const LinearGradient(
+      //   colors: [
+      //     // R.colors.black,
+      //     // R.colors.bgColor,
+      //     // R.colors.themeColor,
+      //     AppColors.secondary,
+      //     AppColors.primary,
+      //     AppColors.secondary,
+      //   ],
+      //   begin: Alignment.topLeft,
+      //   end: Alignment.bottomRight,
+      // ),
     );
   }
 }

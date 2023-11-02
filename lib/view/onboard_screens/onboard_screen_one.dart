@@ -28,14 +28,14 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    h3,
+                    h2,
                     Text("Welcome to Probuddy",
                         textAlign: TextAlign.center,
                         style:
                             AppTextStyles.poppinsBold(color: AppColors.white)),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 50.sp),
-                      child: Image(
+                      child: const Image(
                         image: AssetImage(
                             "asset/images/Companies-Use-Recruiters-scaled-removebg-preview.png"),
                         //height: 350,
@@ -56,7 +56,7 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
                               color: AppColors.white)),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 60.sp),
+                      padding: EdgeInsets.symmetric(vertical: 40.sp),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

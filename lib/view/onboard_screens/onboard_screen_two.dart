@@ -61,7 +61,7 @@ class _OnboardScreenTwoState extends State<OnboardScreenTwo> {
                               color: AppColors.white)),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 60.sp),
+                      padding: EdgeInsets.symmetric(vertical: 40.sp),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

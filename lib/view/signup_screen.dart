@@ -5,6 +5,7 @@ import 'package:pro_buddy/common/custom_button.dart';
 import 'package:pro_buddy/common/global_widgets.dart';
 import 'package:pro_buddy/resources/validator.dart';
 import 'package:pro_buddy/utils/app_colors.dart';
+import 'package:pro_buddy/view/home_screens/home_screen.dart';
 import 'package:pro_buddy/view/login_screen.dart';
 import 'package:sizer/sizer.dart';
 
@@ -171,7 +172,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   text: "Sign up",
                   tap: () {
                     if (_formKey.currentState!.validate()) {
-                      Get.offAllNamed(LoginScreen.route);
+                      Get.offAllNamed(HomeScreen.route);
                     }
                   },
                 ),

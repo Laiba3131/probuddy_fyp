@@ -32,27 +32,43 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-          // backgroundColor: AppColors.black,
-          body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image(
-              image: AssetImage(
-                  'asset/images/WhatsApp_Image_2023-10-05_at_11.12.44_PM-removebg-preview.png'),
-              height: 150.sp,
-              width: 175.sp,
-            ),
-            Text("P R O",
-                style: AppTextStyles.poppinsBold(color: AppColors.primary)),
-            Text("B U D D Y",
-                style: AppTextStyles.poppinsBold(color: AppColors.secondary))
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            // R.colors.black,
+            // R.colors.bgColor,
+            // R.colors.themeColor,
+            Colors.white70,
+            Colors.amber,
+            Colors.blue
           ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
-      )),
+      ),
+      child: SafeArea(
+        child: Scaffold(
+            //backgroundColor: AppColors.black,
+            body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image(
+                image: AssetImage(
+                    'asset/images/WhatsApp_Image_2023-10-05_at_11.12.44_PM-removebg-preview.png'),
+                height: 150.sp,
+                width: 175.sp,
+              ),
+              Text("P R O",
+                  style: AppTextStyles.poppinsBold(color: AppColors.primary)),
+              Text("B U D D Y",
+                  style: AppTextStyles.poppinsBold(color: AppColors.secondary))
+            ],
+          ),
+        )),
+      ),
     );
   }
 }
