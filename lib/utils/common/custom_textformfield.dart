@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import '../resources/app_decoration.dart';
-import '../utils/text_style.dart';
+import '../../resources/app_decoration.dart';
+import '../text_style.dart';
 
 class CustomTextFormField extends StatefulWidget {
   final TextEditingController? controller;

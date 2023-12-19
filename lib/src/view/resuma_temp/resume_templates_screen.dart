@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pro_buddy/common/global_widgets.dart';
+import 'package:pro_buddy/utils/common/global_widgets.dart';
 import 'package:pro_buddy/controller/provider/resume_template_provider.dart';
-import 'package:pro_buddy/view/home_screens/home_screen.dart';
+import 'package:pro_buddy/src/view/home_screens/home_screen.dart';
 import 'template_widget.dart';
 
 class ResumeTemplatesScreen extends StatefulWidget {

@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:pro_buddy/utils/utils.dart';
+import 'package:pro_buddy/src/view/login_screen.dart';
 import 'package:sizer/sizer.dart';
-import '../../common/custom_button.dart';
-import '../../utils/app_colors.dart';
-import '../../common/builts.dart';
-import '../../utils/hight_width.dart';
-import '../../utils/text_style.dart';
-import '../../utils/utils.dart';
-import 'onboard_screen_two.dart';
+import '../../../utils/common/custom_button.dart';
+import '../../../utils/app_colors.dart';
+import '../../../utils/common/builts.dart';
+import '../../../utils/hight_width.dart';
+import '../../../utils/text_style.dart';
 
-class OnboardScreenOne extends StatefulWidget {
-  const OnboardScreenOne({super.key});
+class OnboardScreenThree extends StatefulWidget {
+  const OnboardScreenThree({super.key});
 
   @override
-  State<OnboardScreenOne> createState() => _OnboardScreenOneState();
+  State<OnboardScreenThree> createState() => _OnboardScreenThreeState();
 }
 
-class _OnboardScreenOneState extends State<OnboardScreenOne> {
+class _OnboardScreenThreeState extends State<OnboardScreenThree> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,21 +28,21 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    h2,
+                    h3,
                     Text("Welcome to Probuddy",
                         textAlign: TextAlign.center,
                         style:
                             AppTextStyles.poppinsBold(color: AppColors.white)),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 50.sp),
+                      padding: EdgeInsets.symmetric(vertical: 35.sp),
                       child: const Image(
                         image: AssetImage(
-                            "asset/images/Companies-Use-Recruiters-scaled-removebg-preview.png"),
+                            "asset/images/resume_parsing_3-removebg-preview.png"),
                         //height: 350,
                         width: 270,
                       ),
                     ),
-                    Text("Build Your Professional Story",
+                    Text("Simplify Your Job Hunt",
                         textAlign: TextAlign.center,
                         style: AppTextStyles.poppinsMedium(
                             color: AppColors.primary)),
@@ -50,7 +50,7 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
                       padding: EdgeInsets.symmetric(
                           horizontal: 23.sp, vertical: 15.sp),
                       child: Text(
-                          "Begin your journey towards a standout resume with our user-friendly app. Craft a compelling narrative that showcases your skills and experiences effortlessly.",
+                          "Let us simplify the job application process for you. Create a polished resume in minutes and increase your chances of landing your dream job. Your success story starts here.",
                           textAlign: TextAlign.center,
                           style: AppTextStyles.poppinsRegular(
                               color: AppColors.white)),
@@ -60,23 +60,16 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          Builit.UnSelectBulit,
+                          Builit.UnSelectBulit,
                           Builit.SelectedBulit,
-                          Builit.UnSelectBulit,
-                          Builit.UnSelectBulit,
                         ],
                       ),
                     ),
-                    //   Row(
-                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //   children: [
-                    //     CustomBackButton(),
-                    //     CustomForwordButton(),
-                    //   ],
-                    // ),
                     CustomButton(
                       color: AppColors.primary,
                       tap: () {
-                        pushUntil(context, const OnboardScreenTwo());
+                        pushUntil(context, const LoginScreen());
                       },
                       text: "Get Started",
                     ),

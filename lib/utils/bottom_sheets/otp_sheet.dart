@@ -4,12 +4,12 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:pro_buddy/common/custom_button.dart';
+import 'package:pro_buddy/utils/common/custom_button.dart';
 import 'package:pro_buddy/utils/app_colors.dart';
 import 'package:pro_buddy/utils/hight_width.dart';
 import 'package:pro_buddy/utils/text_style.dart';
 import 'package:sizer/sizer.dart';
-import '../../../../../resources/validator.dart';
+import '../../../../../../resources/validator.dart';
 import 'change_password_sheet.dart';
 
 class OTPSheet extends StatefulWidget {

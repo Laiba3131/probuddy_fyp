@@ -1,18 +1,18 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pro_buddy/common/custom_button.dart';
-import 'package:pro_buddy/common/global_widgets.dart';
+import 'package:pro_buddy/utils/common/custom_button.dart';
+import 'package:pro_buddy/utils/common/global_widgets.dart';
 import 'package:pro_buddy/resources/validator.dart';
 import 'package:pro_buddy/utils/app_colors.dart';
-import 'package:pro_buddy/view/home_screens/home_screen.dart';
-import 'package:pro_buddy/view/login_screen.dart';
+import 'package:pro_buddy/src/view/login_screen.dart';
+import 'package:pro_buddy/src/view/root_screen.dart';
 import 'package:sizer/sizer.dart';
 
-import '../common/custom_textformfield.dart';
-import '../resources/app_decoration.dart';
-import '../utils/hight_width.dart';
-import '../utils/text_style.dart';
+import '../../utils/common/custom_textformfield.dart';
+import '../../resources/app_decoration.dart';
+import '../../utils/hight_width.dart';
+import '../../utils/text_style.dart';
 
 class SignupScreen extends StatefulWidget {
   static String route = "/signupScreen";
@@ -172,7 +172,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   text: "Sign up",
                   tap: () {
                     if (_formKey.currentState!.validate()) {
-                      Get.offAllNamed(HomeScreen.route);
+                      Get.offAllNamed(RootScreen.route);
                     }
                   },
                 ),

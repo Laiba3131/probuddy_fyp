@@ -1,19 +1,19 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pro_buddy/bottom_sheets/forget_password_sheet.dart';
-import 'package:pro_buddy/common/custom_button.dart';
-import 'package:pro_buddy/common/global_widgets.dart';
+import 'package:pro_buddy/utils/bottom_sheets/forget_password_sheet.dart';
+import 'package:pro_buddy/utils/common/custom_button.dart';
+import 'package:pro_buddy/utils/common/global_widgets.dart';
 import 'package:pro_buddy/resources/app_images.dart';
 import 'package:pro_buddy/resources/validator.dart';
-import 'package:pro_buddy/view/home_screens/home_screen.dart';
-import 'package:pro_buddy/view/signup_screen.dart';
+import 'package:pro_buddy/src/view/root_screen.dart';
+import 'package:pro_buddy/src/view/signup_screen.dart';
 import 'package:sizer/sizer.dart';
-import '../common/custom_textformfield.dart';
-import '../resources/app_decoration.dart';
-import '../utils/app_colors.dart';
-import '../utils/hight_width.dart';
-import '../utils/text_style.dart';
+import '../../utils/common/custom_textformfield.dart';
+import '../../resources/app_decoration.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/hight_width.dart';
+import '../../utils/text_style.dart';
 
 class LoginScreen extends StatefulWidget {
   static String route = "/loginScreen";
@@ -134,7 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     // context.read<RootProvider>().selectedScreenValue = 2;
                     // context.read<RootProvider>().update();
                     if (_formKey.currentState!.validate()) {
-                      Get.offAllNamed(HomeScreen.route,
+                      Get.offAllNamed(RootScreen.route,
                           arguments: {"isFromLogin": true});
                     }
                   },

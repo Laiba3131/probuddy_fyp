@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pro_buddy/bottom_sheets/congra_sheet.dart';
-import 'package:pro_buddy/common/custom_button.dart';
-import 'package:pro_buddy/common/custom_textformfield.dart';
+import 'package:pro_buddy/utils/bottom_sheets/congra_sheet.dart';
+import 'package:pro_buddy/utils/common/custom_button.dart';
+import 'package:pro_buddy/utils/common/custom_textformfield.dart';
 import 'package:pro_buddy/utils/hight_width.dart';
 import 'package:sizer/sizer.dart';
-import '../resources/validator.dart';
-import '../utils/app_colors.dart';
-import '../utils/text_style.dart';
+import '../../resources/validator.dart';
+import '../app_colors.dart';
+import '../text_style.dart';
 
 class ChangePasswordSheet extends StatefulWidget {
   const ChangePasswordSheet({super.key});

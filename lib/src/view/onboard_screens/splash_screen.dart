@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:pro_buddy/view/onboard_screens/onboard_screen_one.dart';
+import 'package:pro_buddy/src/view/onboard_screens/onboard_screen_one.dart';
 import 'package:sizer/sizer.dart';
-import '../../utils/app_colors.dart';
-import '../../utils/text_style.dart';
-import '../../utils/utils.dart';
+import '../../../utils/app_colors.dart';
+import '../../../utils/text_style.dart';
+import '../../../utils/utils.dart';
 
 class SplashScreen extends StatefulWidget {
   static String route = "/splaseScreen";

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_buddy/common/custom_button.dart';
+import 'package:pro_buddy/utils/common/custom_button.dart';
 import 'package:pro_buddy/utils/app_colors.dart';
 import 'package:pro_buddy/utils/hight_width.dart';
 import 'package:pro_buddy/utils/text_style.dart';

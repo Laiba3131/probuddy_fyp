@@ -2,15 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pro_buddy/bottom_sheets/otp_sheet.dart';
-import 'package:pro_buddy/common/custom_button.dart';
-import 'package:pro_buddy/common/custom_textformfield.dart';
+import 'package:pro_buddy/utils/bottom_sheets/otp_sheet.dart';
+import 'package:pro_buddy/utils/common/custom_button.dart';
+import 'package:pro_buddy/utils/common/custom_textformfield.dart';
 import 'package:pro_buddy/utils/app_colors.dart';
 import 'package:pro_buddy/utils/hight_width.dart';
 import 'package:pro_buddy/utils/text_style.dart';
-import 'package:pro_buddy/view/login_screen.dart';
+import 'package:pro_buddy/src/view/login_screen.dart';
 import 'package:sizer/sizer.dart';
-import '../resources/validator.dart';
+import '../../resources/validator.dart';
 
 class ForgotPasswordSheet extends StatefulWidget {
   final String title;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pro_buddy/common/global_widgets.dart';
+import 'package:pro_buddy/utils/common/global_widgets.dart';
 import 'package:pro_buddy/controller/provider/visiting_cards_provider.dart';
-import 'package:pro_buddy/view/home_screens/home_screen.dart';
-import 'package:pro_buddy/view/visiting_cards_temp/visiting_card_widget.dart';
+import 'package:pro_buddy/src/view/home_screens/home_screen.dart';
+import 'package:pro_buddy/src/view/visiting_cards_temp/visiting_card_widget.dart';
 
 class VisitingCardTemplates extends StatefulWidget {
   static String route = "/visitingcardstemplates";
