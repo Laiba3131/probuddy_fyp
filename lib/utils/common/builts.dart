@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pro_buddy/resources/resources.dart';
 
-import '../app_colors.dart';
+import '../../resources/app_colors.dart';
 
 class Builit {
   static var SelectedBulit = Padding(
@@ -9,7 +10,7 @@ class Builit {
       height: 8,
       width: 16,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(40), color: AppColors.primary),
+          borderRadius: BorderRadius.circular(40), color: R.colors.primary),
     ),
   );
 
@@ -19,7 +20,7 @@ class Builit {
       height: 8,
       width: 8,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(40), color: AppColors.white),
+          borderRadius: BorderRadius.circular(40), color: R.colors.white),
     ),
   );
 }

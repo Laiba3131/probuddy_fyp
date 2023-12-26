@@ -1,18 +1,14 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pro_buddy/resources/resources.dart';
+import 'package:pro_buddy/src/base/view/base_view.dart';
 import 'package:pro_buddy/utils/common/custom_button.dart';
 import 'package:pro_buddy/utils/common/global_widgets.dart';
 import 'package:pro_buddy/resources/validator.dart';
-import 'package:pro_buddy/utils/app_colors.dart';
-import 'package:pro_buddy/src/view/login_screen.dart';
-import 'package:pro_buddy/src/view/root_screen.dart';
+import 'package:pro_buddy/src/auth/view/login_screen.dart';
 import 'package:sizer/sizer.dart';
-
-import '../../utils/common/custom_textformfield.dart';
-import '../../resources/app_decoration.dart';
-import '../../utils/hight_width.dart';
-import '../../utils/text_style.dart';
+import '../../../utils/common/custom_textformfield.dart';
+import '../../../utils/hight_width.dart';
 
 class SignupScreen extends StatefulWidget {
   static String route = "/signupScreen";
@@ -152,8 +148,8 @@ class _SignupScreenState extends State<SignupScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Checkbox(
-                        checkColor: AppColors.white,
-                        activeColor: AppColors.primary,
+                        checkColor: R.colors.white,
+                        activeColor: R.colors.primary,
                         value: isChecked,
                         onChanged: (bool? value) {
                           setState(() {
@@ -172,35 +168,11 @@ class _SignupScreenState extends State<SignupScreen> {
                   text: "Sign up",
                   tap: () {
                     if (_formKey.currentState!.validate()) {
-                      Get.offAllNamed(RootScreen.route);
+                      Get.offAllNamed(BaseView.route);
                     }
                   },
                 ),
                 h2,
-                Text(
-                  'OR',
-                  style: AppTextStyles.poppinsBold(),
-                ),
-                h2,
-                Container(
-                    padding: EdgeInsets.symmetric(vertical: 2.sp),
-                    decoration: AppDecoration.decoration(radius: 12),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CachedNetworkImage(
-                            height: 4.h,
-                            width: 10.w,
-                            imageUrl:
-                                'https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png',
-                            fit: BoxFit.cover),
-                        w2,
-                        Text(
-                          'Login with Google',
-                          style: AppTextStyles.poppinsRegular(),
-                        )
-                      ],
-                    ))
               ],
             ),
           ),

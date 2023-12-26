@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pro_buddy/resources/app_decoration.dart';
 import 'package:pro_buddy/resources/app_images.dart';
-import 'package:pro_buddy/utils/app_colors.dart';
+import 'package:pro_buddy/resources/app_colors.dart';
+import 'package:pro_buddy/resources/resources.dart';
 import 'package:pro_buddy/utils/hight_width.dart';
 import 'package:pro_buddy/utils/text_style.dart';
 import 'package:sizer/sizer.dart';
@@ -28,13 +29,13 @@ class HomeWidget extends StatelessWidget {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: AppColors.grey.withOpacity(.16),
+                    color: R.colors.grey.withOpacity(.16),
                     spreadRadius: 3,
                     blurRadius: 12,
                     offset: const Offset(1, 1),
                   ),
                   BoxShadow(
-                    color: AppColors.grey.withOpacity(.16),
+                    color: R.colors.grey.withOpacity(.16),
                     spreadRadius: 3,
                     blurRadius: 12,
                     offset: const Offset(-1, -1),
@@ -48,7 +49,7 @@ class HomeWidget extends StatelessWidget {
                 },
                 child: ImageIcon(
                   AssetImage(AppImages.cv),
-                  color: AppColors.secondary,
+                  color: R.colors.secondary,
                   size: 14.sp,
                 ),
               ),
@@ -56,7 +57,7 @@ class HomeWidget extends StatelessWidget {
             w2,
             Text(
               text,
-              style: AppTextStyles.poppinsMedium(color: AppColors.secondary),
+              style: R.textStyles.poppinsMedium(color: R.colors.secondary),
             ),
           ],
         ),

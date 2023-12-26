@@ -2,14 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pro_buddy/resources/resources.dart';
 import 'package:pro_buddy/utils/bottom_sheets/congra_sheet.dart';
 import 'package:pro_buddy/utils/common/custom_button.dart';
 import 'package:pro_buddy/utils/common/custom_textformfield.dart';
 import 'package:pro_buddy/utils/hight_width.dart';
 import 'package:sizer/sizer.dart';
 import '../../resources/validator.dart';
-import '../app_colors.dart';
-import '../text_style.dart';
 
 class ChangePasswordSheet extends StatefulWidget {
   const ChangePasswordSheet({super.key});
@@ -36,8 +35,8 @@ class _ChangePasswordSheetState extends State<ChangePasswordSheet> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        color: AppColors.white,
+      decoration: BoxDecoration(
+        color: R.colors.white,
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       padding: EdgeInsets.symmetric(horizontal: 12.sp, vertical: 12.sp),
@@ -51,13 +50,13 @@ class _ChangePasswordSheetState extends State<ChangePasswordSheet> {
             h1,
             Text(
               'Update Password',
-              style: AppTextStyles.poppinsBold(
-                  color: AppColors.black, fontSize: 15.sp),
+              style: R.textStyles
+                  .poppinsBold(color: R.colors.black, fontSize: 15.sp),
             ),
             h2,
             Text(
               'Must include letter number and symbols.',
-              style: AppTextStyles.poppinsRegular(color: AppColors.black),
+              style: R.textStyles.poppinsRegular(color: R.colors.black),
             ),
             h2,
             CustomTextFormField(

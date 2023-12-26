@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_buddy/model/visiting_cards_model.dart';
-import 'package:pro_buddy/utils/app_colors.dart';
+import 'package:pro_buddy/resources/resources.dart';
 import 'package:sizer/sizer.dart';
 
 class VisitingCardWidget extends StatefulWidget {
@@ -20,7 +20,7 @@ class _VisitingCardWidgetState extends State<VisitingCardWidget> {
       height: 10.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: AppColors.white,
+        color: R.colors.white,
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.20),

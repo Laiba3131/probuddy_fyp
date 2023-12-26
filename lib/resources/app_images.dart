@@ -1,6 +1,5 @@
 class AppImages {
-  static var logo =
-      "asset/images/WhatsApp_Image_2023-10-05_at_11.12.44_PM-removebg-preview.png";
+  var logo = "asset/images/logo.png";
   static var bannerBackground = "assets/images/hero.jpg";
   static var facebook = "assets/images/facebook.png";
   static var google = "assets/images/google.png";

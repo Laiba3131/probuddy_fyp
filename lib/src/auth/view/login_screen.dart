@@ -1,19 +1,15 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pro_buddy/resources/resources.dart';
+import 'package:pro_buddy/src/base/view/base_view.dart';
 import 'package:pro_buddy/utils/bottom_sheets/forget_password_sheet.dart';
 import 'package:pro_buddy/utils/common/custom_button.dart';
 import 'package:pro_buddy/utils/common/global_widgets.dart';
-import 'package:pro_buddy/resources/app_images.dart';
 import 'package:pro_buddy/resources/validator.dart';
-import 'package:pro_buddy/src/view/root_screen.dart';
-import 'package:pro_buddy/src/view/signup_screen.dart';
+import 'package:pro_buddy/src/auth/view/signup_screen.dart';
 import 'package:sizer/sizer.dart';
-import '../../utils/common/custom_textformfield.dart';
-import '../../resources/app_decoration.dart';
-import '../../utils/app_colors.dart';
-import '../../utils/hight_width.dart';
-import '../../utils/text_style.dart';
+import '../../../utils/common/custom_textformfield.dart';
+import '../../../utils/hight_width.dart';
 
 class LoginScreen extends StatefulWidget {
   static String route = "/loginScreen";
@@ -44,12 +40,12 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(AppImages.logo, height: 25.h),
+                Image.asset(R.images.logo, height: 25.h),
                 h2,
                 Text(
                   "Login",
-                  style: AppTextStyles.poppinsBold(
-                    color: AppColors.secondary,
+                  style: R.textStyles.poppinsBold(
+                    color: R.colors.secondary,
                     fontSize: 18.sp,
                   ),
                 ),
@@ -118,9 +114,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         Text(
                           "Forgot Password?",
                           textAlign: TextAlign.center,
-                          style: AppTextStyles.poppinsMedium(
+                          style: R.textStyles.poppinsMedium(
                             fontSize: 12.sp,
-                            color: AppColors.secondary,
+                            color: R.colors.secondary,
                           ),
                         ),
                       ],
@@ -134,36 +130,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     // context.read<RootProvider>().selectedScreenValue = 2;
                     // context.read<RootProvider>().update();
                     if (_formKey.currentState!.validate()) {
-                      Get.offAllNamed(RootScreen.route,
+                      Get.offAllNamed(BaseView.route,
                           arguments: {"isFromLogin": true});
                     }
                   },
                 ),
                 h2,
-                Text(
-                  'OR',
-                  style: AppTextStyles.poppinsBold(),
-                ),
-                h2,
-                Container(
-                    padding: EdgeInsets.symmetric(vertical: 2.sp),
-                    decoration: AppDecoration.decoration(radius: 12),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CachedNetworkImage(
-                            height: 4.h,
-                            width: 10.w,
-                            imageUrl:
-                                'https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png',
-                            fit: BoxFit.cover),
-                        w2,
-                        Text(
-                          'Login with Google',
-                          style: AppTextStyles.poppinsRegular(),
-                        )
-                      ],
-                    ))
               ],
             ),
           ),

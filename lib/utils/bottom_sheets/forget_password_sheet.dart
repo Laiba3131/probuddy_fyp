@@ -2,13 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pro_buddy/resources/resources.dart';
 import 'package:pro_buddy/utils/bottom_sheets/otp_sheet.dart';
 import 'package:pro_buddy/utils/common/custom_button.dart';
 import 'package:pro_buddy/utils/common/custom_textformfield.dart';
-import 'package:pro_buddy/utils/app_colors.dart';
+import 'package:pro_buddy/resources/app_colors.dart';
 import 'package:pro_buddy/utils/hight_width.dart';
 import 'package:pro_buddy/utils/text_style.dart';
-import 'package:pro_buddy/src/view/login_screen.dart';
+import 'package:pro_buddy/src/auth/view/login_screen.dart';
 import 'package:sizer/sizer.dart';
 import '../../resources/validator.dart';
 
@@ -46,8 +47,8 @@ class _ForgotPasswordSheetState extends State<ForgotPasswordSheet> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        color: AppColors.white,
+      decoration: BoxDecoration(
+        color: R.colors.white,
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       padding: EdgeInsets.symmetric(horizontal: 12.sp, vertical: 12.sp),
@@ -60,14 +61,14 @@ class _ForgotPasswordSheetState extends State<ForgotPasswordSheet> {
             h2,
             Text(
               widget.title,
-              style: AppTextStyles.poppinsBold(
-                  color: AppColors.black, fontSize: 15.sp),
+              style: R.textStyles
+                  .poppinsBold(color: R.colors.black, fontSize: 15.sp),
             ),
             h2,
             Text(
               widget.subTitle,
               textAlign: TextAlign.center,
-              style: AppTextStyles.poppinsRegular(color: AppColors.black),
+              style: R.textStyles.poppinsRegular(color: R.colors.black),
             ),
             h2,
             if (widget.isFromDelete ?? false)

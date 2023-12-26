@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pro_buddy/resources/resources.dart';
 import 'package:sizer/sizer.dart';
-import '../../../utils/common/custom_button.dart';
-import '../../../utils/app_colors.dart';
-import '../../../utils/common/builts.dart';
-import '../../../utils/hight_width.dart';
-import '../../../utils/text_style.dart';
-import '../../../utils/utils.dart';
+import '../../../../../utils/common/custom_button.dart';
+import '../../../../../utils/common/builts.dart';
+import '../../../../../utils/hight_width.dart';
+import '../../../../../utils/utils.dart';
 import 'onboard-screen_three.dart';
 
 class OnboardScreenTwo extends StatefulWidget {
@@ -20,7 +19,7 @@ class _OnboardScreenTwoState extends State<OnboardScreenTwo> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: AppColors.secondary,
+          backgroundColor: R.colors.secondary,
           body: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 35.sp, horizontal: 25.sp),
@@ -36,8 +35,7 @@ class _OnboardScreenTwoState extends State<OnboardScreenTwo> {
                     h3,
                     Text("Welcome to Probuddy",
                         textAlign: TextAlign.center,
-                        style:
-                            AppTextStyles.poppinsBold(color: AppColors.white)),
+                        style: R.textStyles.poppinsBold(color: R.colors.white)),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 35.sp),
                       child: const Image(
@@ -49,16 +47,16 @@ class _OnboardScreenTwoState extends State<OnboardScreenTwo> {
                     ),
                     Text("Tailor-Made Templates",
                         textAlign: TextAlign.center,
-                        style: AppTextStyles.poppinsMedium(
-                            color: AppColors.primary)),
+                        style: R.textStyles
+                            .poppinsMedium(color: R.colors.primary)),
                     Padding(
                       padding: EdgeInsets.symmetric(
                           horizontal: 23.sp, vertical: 15.sp),
                       child: Text(
                           "Explore a variety of professionally designed templates that can be personalized to match your unique style and career aspirations. Make your resume truly yours.",
                           textAlign: TextAlign.center,
-                          style: AppTextStyles.poppinsRegular(
-                              color: AppColors.white)),
+                          style: R.textStyles
+                              .poppinsRegular(color: R.colors.white)),
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 40.sp),
@@ -72,7 +70,7 @@ class _OnboardScreenTwoState extends State<OnboardScreenTwo> {
                       ),
                     ),
                     CustomButton(
-                      color: AppColors.primary,
+                      color: R.colors.primary,
                       tap: () {
                         pushUntil(context, const OnboardScreenThree());
                       },

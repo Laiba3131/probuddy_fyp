@@ -1,8 +1,9 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:pro_buddy/resources/resources.dart';
 import 'package:sizer/sizer.dart';
-import '../app_colors.dart';
+import '../../resources/app_colors.dart';
 import '../text_style.dart';
 
 class CustomButton extends StatelessWidget {
@@ -26,8 +27,7 @@ class CustomButton extends StatelessWidget {
             EdgeInsets.symmetric(vertical: 9.sp, horizontal: 8)),
         shape: MaterialStateProperty.all(
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
-        backgroundColor:
-            MaterialStateProperty.all(color ?? AppColors.secondary),
+        backgroundColor: MaterialStateProperty.all(color ?? R.colors.secondary),
         shadowColor: MaterialStateProperty.all(Colors.transparent),
       ),
       child: Row(
@@ -35,8 +35,9 @@ class CustomButton extends StatelessWidget {
         children: [
           Text(
             text,
-            style: AppTextStyles.poppinsMedium()
-                .copyWith(color: textColor ?? AppColors.white, fontSize: 12.sp),
+            style: R.textStyles
+                .poppinsMedium()
+                .copyWith(color: textColor ?? R.colors.white, fontSize: 12.sp),
           ),
         ],
       ),
@@ -63,11 +64,11 @@ class CustomButton extends StatelessWidget {
 //           height: 45,
 //           width: 120,
 //           decoration: BoxDecoration(
-//               color: AppColors.primary, borderRadius: BorderRadius.circular(5)),
+//               color: R.colors.primary, borderRadius: BorderRadius.circular(5)),
 //           child: Center(
 //               child: Text(
 //             text,
-//             style: AppTextStyles.poppinsRegular().copyWith(color: textCol),
+//             style: R.textStyles.poppinsRegular().copyWith(color: textCol),
 //           )),
 //         ),
 //       ),
